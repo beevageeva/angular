@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
@@ -14,7 +16,11 @@ import { NewsComponent } from './news/news.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+//    AppRoutingModule
+    RouterModule.forRoot([
+      {path: 'news', component: NewsComponent}, 
+      {path: 'home', component: HomeComponent}, 
+     ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
